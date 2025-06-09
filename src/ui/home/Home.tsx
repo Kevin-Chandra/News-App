@@ -1,26 +1,27 @@
+import { useTranslation } from 'react-i18next';
 import { Button, Text } from 'react-native-paper';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { Navigation } from 'src/typings/Navigations';
 
 export default function Home({
-  route,
   navigation,
 }: Navigation.RootStackScreenProps<'Home'>) {
+  const { t } = useTranslation('news');
   return (
     <SafeAreaView>
-      <Text>Home Screen</Text>
+      <Text>{t('home.title')}</Text>
       <Button
         onPress={() => {
           navigation.navigate('ArticleSearch');
         }}>
-        Article Search
+        {t('searchArticle.title')}
       </Button>
 
       <Button
         onPress={() => {
           navigation.navigate('ArticleDetails', { articleId: '4429' });
         }}>
-        Article Details
+        {t('articleDetails.title')}
       </Button>
     </SafeAreaView>
   );
