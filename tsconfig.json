@@ -1,3 +1,16 @@
 {
-  "extends": "@react-native/typescript-config/tsconfig.json"
+  "extends": "@react-native/typescript-config/tsconfig.json",
+  "compilerOptions": {
+    "strictNullChecks": true,
+    "moduleResolution": "bundler",
+    "baseUrl": ".",
+    "paths": {
+          "@test/*": ["__tests__/*"],
+          "@app/*": ["src/app/*"],
+          "@core/*": ["src/core/*"],
+          "@resources/*": ["src/resources/*"],
+          "@ui/*": ["src/ui/*"],
+          "@utils/*": ["src/utils/*"],
+        }
+  },
 }
