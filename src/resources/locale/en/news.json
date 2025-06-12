@@ -1,0 +1,11 @@
+{
+    "home": {
+        "title": "Home Screen"
+    },
+    "articleDetails": {
+        "title": "Article Details"
+    },
+    "searchArticle": {
+        "title": "Search Article"
+    }
+}
